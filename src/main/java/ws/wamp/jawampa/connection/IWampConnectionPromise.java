@@ -16,7 +16,7 @@ public interface IWampConnectionPromise<T> extends IWampConnectionFuture<T> {
      * A default implementation of the promise whose instance methods do nothing.<br>
      * Can be used in cases where the caller is not interested in the call results.
      */
-    public static final IWampConnectionPromise<Void> Empty = new IWampConnectionPromise<>() {
+    public static final IWampConnectionPromise<Void> Empty = new IWampConnectionPromise<Void>() {
         @Override
         public Void result() {
             return null;

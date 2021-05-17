@@ -51,7 +51,7 @@ public class QueueingConnectionController implements IConnectionController {
         Closed
     }
     
-    final ICompletionCallback<Void> messageSentHandler = new ICompletionCallback<> () {
+    final ICompletionCallback<Void> messageSentHandler = new ICompletionCallback<Void> () {
         @Override
         public void onCompletion(final IWampConnectionFuture<Void> future) {
             tryScheduleAction(new Runnable() {
@@ -86,7 +86,7 @@ public class QueueingConnectionController implements IConnectionController {
         }
     };
     
-    final ICompletionCallback<Void> connectionClosedHandler = new ICompletionCallback<> () {
+    final ICompletionCallback<Void> connectionClosedHandler = new ICompletionCallback<Void> () {
         @Override
         public void onCompletion(final IWampConnectionFuture<Void> future) {
             tryScheduleAction(new Runnable() {

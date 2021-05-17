@@ -275,7 +275,7 @@ public class WampRouter {
 		}
 	}
 
-	private ICompletionCallback<Void> onConnectionClosed = new ICompletionCallback<>() {
+	private ICompletionCallback<Void> onConnectionClosed = new ICompletionCallback<Void>() {
 		@Override
 		public void onCompletion(IWampConnectionFuture<Void> future) {
 			tryScheduleAction(new Runnable() {
